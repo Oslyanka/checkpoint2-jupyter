@@ -1,0 +1,385 @@
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2, h3 { color: #333; }
+            table { border-collapse: collapse; width: 100%; }
+            th, td { padding: 8px; text-align: left; border: 1px solid #ddd; }
+            th { background-color: #f2f2f2; }
+            .container {
+                display: flex;
+                flex-wrap: wrap; /* Permite que as colunas se ajustem */
+                gap: 20px; /* Espaçamento entre as colunas */
+            }
+            .col {
+                flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+                padding: 10px;
+                border: 1px solid #ccc;
+                box-sizing: border-box; /* Para incluir padding e border no tamanho total */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Data Report</h1>
+
+        <h2>Summary Statistics</h2>
+        <table border="1" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>unique</th>
+      <th>top</th>
+      <th>freq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Hours_Studied</th>
+      <td>6607</td>
+      <td>41</td>
+      <td>20</td>
+      <td>465</td>
+    </tr>
+    <tr>
+      <th>Attendance</th>
+      <td>6607</td>
+      <td>41</td>
+      <td>67</td>
+      <td>190</td>
+    </tr>
+    <tr>
+      <th>Parental_Involvement</th>
+      <td>6607</td>
+      <td>3</td>
+      <td>Medium</td>
+      <td>3362</td>
+    </tr>
+    <tr>
+      <th>Access_to_Resources</th>
+      <td>6607</td>
+      <td>3</td>
+      <td>Medium</td>
+      <td>3319</td>
+    </tr>
+    <tr>
+      <th>Extracurricular_Activities</th>
+      <td>6607</td>
+      <td>2</td>
+      <td>Yes</td>
+      <td>3938</td>
+    </tr>
+    <tr>
+      <th>Sleep_Hours</th>
+      <td>6607</td>
+      <td>7</td>
+      <td>7</td>
+      <td>1741</td>
+    </tr>
+    <tr>
+      <th>Previous_Scores</th>
+      <td>6607</td>
+      <td>51</td>
+      <td>66</td>
+      <td>165</td>
+    </tr>
+    <tr>
+      <th>Motivation_Level</th>
+      <td>6607</td>
+      <td>3</td>
+      <td>Medium</td>
+      <td>3351</td>
+    </tr>
+    <tr>
+      <th>Internet_Access</th>
+      <td>6607</td>
+      <td>2</td>
+      <td>Yes</td>
+      <td>6108</td>
+    </tr>
+    <tr>
+      <th>Tutoring_Sessions</th>
+      <td>6607</td>
+      <td>9</td>
+      <td>1</td>
+      <td>2179</td>
+    </tr>
+    <tr>
+      <th>Family_Income</th>
+      <td>6607</td>
+      <td>3</td>
+      <td>Low</td>
+      <td>2672</td>
+    </tr>
+    <tr>
+      <th>Teacher_Quality</th>
+      <td>6529</td>
+      <td>3</td>
+      <td>Medium</td>
+      <td>3925</td>
+    </tr>
+    <tr>
+      <th>School_Type</th>
+      <td>6607</td>
+      <td>2</td>
+      <td>Public</td>
+      <td>4598</td>
+    </tr>
+    <tr>
+      <th>Peer_Influence</th>
+      <td>6607</td>
+      <td>3</td>
+      <td>Positive</td>
+      <td>2638</td>
+    </tr>
+    <tr>
+      <th>Physical_Activity</th>
+      <td>6607</td>
+      <td>7</td>
+      <td>3</td>
+      <td>2545</td>
+    </tr>
+    <tr>
+      <th>Learning_Disabilities</th>
+      <td>6607</td>
+      <td>2</td>
+      <td>No</td>
+      <td>5912</td>
+    </tr>
+    <tr>
+      <th>Parental_Education_Level</th>
+      <td>6517</td>
+      <td>3</td>
+      <td>High School</td>
+      <td>3223</td>
+    </tr>
+    <tr>
+      <th>Distance_from_Home</th>
+      <td>6540</td>
+      <td>3</td>
+      <td>Near</td>
+      <td>3884</td>
+    </tr>
+    <tr>
+      <th>Gender</th>
+      <td>6607</td>
+      <td>2</td>
+      <td>Male</td>
+      <td>3814</td>
+    </tr>
+    <tr>
+      <th>Exam_Score</th>
+      <td>6607</td>
+      <td>45</td>
+      <td>68</td>
+      <td>759</td>
+    </tr>
+  </tbody>
+</table>
+
+        <h2>Missing Values</h2>
+        <table border="1" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Hours_Studied</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Attendance</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Parental_Involvement</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Access_to_Resources</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Extracurricular_Activities</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Sleep_Hours</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Previous_Scores</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Motivation_Level</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Internet_Access</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Tutoring_Sessions</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Family_Income</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Teacher_Quality</th>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>School_Type</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Peer_Influence</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Physical_Activity</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Learning_Disabilities</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Parental_Education_Level</th>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>Distance_from_Home</th>
+      <td>67</td>
+    </tr>
+    <tr>
+      <th>Gender</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Exam_Score</th>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+        <h2>Correlation Between Hours Studied and Exam Score</h2>
+        <img src="study_score_correlation.png" width="600">
+
+        <h2>Univariate Distributions</h2>
+        <div class="container">
+            
+                <div class="col">
+                    <h3>Hours_Studied</h3>
+                    <img src="univariate_Hours_Studied.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Attendance</h3>
+                    <img src="univariate_Attendance.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Parental_Involvement</h3>
+                    <img src="univariate_Parental_Involvement.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Access_to_Resources</h3>
+                    <img src="univariate_Access_to_Resources.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Extracurricular_Activities</h3>
+                    <img src="univariate_Extracurricular_Activities.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Sleep_Hours</h3>
+                    <img src="univariate_Sleep_Hours.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Previous_Scores</h3>
+                    <img src="univariate_Previous_Scores.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Motivation_Level</h3>
+                    <img src="univariate_Motivation_Level.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Internet_Access</h3>
+                    <img src="univariate_Internet_Access.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Tutoring_Sessions</h3>
+                    <img src="univariate_Tutoring_Sessions.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Family_Income</h3>
+                    <img src="univariate_Family_Income.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Teacher_Quality</h3>
+                    <img src="univariate_Teacher_Quality.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>School_Type</h3>
+                    <img src="univariate_School_Type.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Peer_Influence</h3>
+                    <img src="univariate_Peer_Influence.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Physical_Activity</h3>
+                    <img src="univariate_Physical_Activity.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Learning_Disabilities</h3>
+                    <img src="univariate_Learning_Disabilities.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Parental_Education_Level</h3>
+                    <img src="univariate_Parental_Education_Level.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Distance_from_Home</h3>
+                    <img src="univariate_Distance_from_Home.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Gender</h3>
+                    <img src="univariate_Gender.png" width="100%">
+                </div>
+            
+                <div class="col">
+                    <h3>Exam_Score</h3>
+                    <img src="univariate_Exam_Score.png" width="100%">
+                </div>
+            
+        </div>
+    </body>
+    </html>
+    
